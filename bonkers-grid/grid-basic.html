@@ -13,7 +13,9 @@
         display: grid;
         gap: 1rem;
 
-        grid-template-columns: repeat(12, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+
+        /* implicit grid: let the algorithm figure out cols/rows -> auto-fit*/
       }
     </style>
   </head>
