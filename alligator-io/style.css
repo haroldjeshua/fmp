@@ -1,5 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;400&family=Syncopate:wght@400;700&display=swap");
 
+:root {
+  --gray0: #f8f8f8;
+  --gray1: #dbe1e8;
+  --gray2: #b2becd;
+  --gray3: #6c7983;
+  --gray4: #454e56;
+  --gray5: #2a2e35;
+  --gray6: #12181b;
+  --blue: #0084a5;
+  --purple: #a82dd1;
+  --yellow: #fff565;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -24,7 +37,6 @@ header {
   padding: 1em;
   clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
   background: var(--bg-nav);
-  background: lightpink;
   margin-bottom: 1em;
   padding-bottom: 3.5em;
   text-align: center;
@@ -72,7 +84,7 @@ img {
   box-shadow: rgba(2, 8, 20, 0.1) 0px 0.175em 0.5em;
   transform: translateX(-66%);
   transition: opacity 0.15s ease-out;
-  opacity: 1;
+  opacity: 0;
   z-index: 2;
 }
 
@@ -110,20 +122,6 @@ img {
 }
 
 /* Themes */
-
-:root {
-  --gray0: #f8f8f8;
-  --gray1: #dbe1e8;
-  --gray2: #b2becd;
-  --gray3: #6c7983;
-  --gray4: #454e56;
-  --gray5: #2a2e35;
-  --gray6: #12181b;
-  --blue: #0084a5;
-  --purple: #a82dd1;
-  --yellow: #fff565;
-}
-
 .light {
   --bg: var(--gray0);
   --bg-nav: linear-gradient(to right, var(--gray1), var(--gray3));
