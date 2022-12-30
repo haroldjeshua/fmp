@@ -43,7 +43,7 @@ header {
 }
 
 main {
-  min-height: 1000px;
+  min-height: 100vh;
   padding: 2rem;
 }
 
@@ -71,7 +71,7 @@ img {
 
 .dropdown {
   position: absolute;
-  width: auto;
+  width: min-content;
   background: var(--bg-dropdown);
   display: flex;
   flex-direction: column;
