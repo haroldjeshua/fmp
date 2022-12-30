@@ -5,6 +5,199 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Animated Grid</title>
+
+    <style>
+      @import url("./base.css");
+
+      .grid-animated {
+        margin: 2rem 0 200px;
+        height: 85vh;
+
+        display: grid;
+        gap: 1rem;
+
+        grid-template-areas:
+          "a b c d"
+          "l 🚀 🚀 e"
+          "k 🚀 🚀 f"
+          "j i h g";
+
+        grid-template-rows: repeat(4, 25%);
+        grid-template-columns: 256px auto auto 256px;
+
+        --stagger-delay: 120ms;
+      }
+
+      @keyframes cardEntrance {
+        from {
+          opacity: 0;
+          transform: scale(0.25);
+          filter: hue-rotate(180deg);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+          filter: hue-rotate(0deg);
+        }
+      }
+
+      .card {
+        background-color: hsl(263, 100%, 50%);
+        animation: cardEntrance 700ms ease-out;
+        animation-fill-mode: backwards;
+      }
+
+      .card:nth-child(1) {
+        grid-area: a;
+        animation-delay: calc(1 * var(--stagger-delay));
+      }
+      .card:nth-child(2) {
+        grid-area: b;
+        animation-delay: calc(2 * var(--stagger-delay));
+      }
+      .card:nth-child(3) {
+        grid-area: c;
+        animation-delay: calc(3 * var(--stagger-delay));
+      }
+      .card:nth-child(4) {
+        grid-area: d;
+        animation-delay: calc(4 * var(--stagger-delay));
+      }
+      .card:nth-child(5) {
+        grid-area: e;
+        animation-delay: calc(5 * var(--stagger-delay));
+      }
+      .card:nth-child(6) {
+        grid-area: f;
+        animation-delay: calc(6 * var(--stagger-delay));
+      }
+      .card:nth-child(7) {
+        grid-area: g;
+        animation-delay: calc(7 * var(--stagger-delay));
+      }
+      .card:nth-child(8) {
+        grid-area: h;
+        animation-delay: calc(8 * var(--stagger-delay));
+      }
+      .card:nth-child(9) {
+        grid-area: i;
+        animation-delay: calc(9 * var(--stagger-delay));
+      }
+      .card:nth-child(10) {
+        grid-area: j;
+        animation-delay: calc(10 * var(--stagger-delay));
+      }
+      .card:nth-child(11) {
+        grid-area: k;
+        animation-delay: calc(11 * var(--stagger-delay));
+      }
+      .card:nth-child(12) {
+        grid-area: l;
+        animation-delay: calc(12 * var(--stagger-delay));
+      }
+      .card:last-child {
+        grid-area: 🚀;
+        animation-delay: calc(13 * var(--stagger-delay));
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <h1>Animated Grid</h1>
+    <section class="grid-animated">
+      <div
+        class="card"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1558981359-219d6364c9c8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80');
+        "
+      ></div>
+      <div
+        class="card"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1583585635793-0e1894c169bd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=913&q=80');
+        "
+      ></div>
+      <div
+        class="card"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1583426573939-97d09302d76a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80');
+        "
+      ></div>
+      <div
+        class="card"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1583531172005-814191b8b6c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=975&q=80');
+        "
+      ></div>
+      <div
+        class="card"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1583532452513-a02186582ccd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+        "
+      ></div>
+      <div
+        class="card"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1583445013765-46c20c4a6772?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+        "
+      ></div>
+      <div
+        class="card card-wide"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1583425423320-2386622cd2e4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1980&q=80');
+        "
+      ></div>
+      <div
+        class="card"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1583483425010-c566431a7710?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80');
+        "
+      ></div>
+      <div
+        class="card"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1583500557349-fb5238f8d946?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1949&q=80');
+        "
+      ></div>
+      <div
+        class="card"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1583468323330-9032ad490fed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1955&q=80');
+        "
+      ></div>
+      <div
+        class="card"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1583562835057-a62d1beffbf3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=949&q=80');
+        "
+      ></div>
+      <div
+        class="card"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1583518257225-f9a8081f6a84?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+        "
+      ></div>
+      <div
+        class="card"
+        style="
+          background-image: url('https://images.unsplash.com/photo-1502134249126-9f3755a50d78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80');
+        "
+      ></div>
+    </section>
+
+    <section class="grid-animated">
+      <div class="card">a</div>
+      <div class="card">b</div>
+      <div class="card">c</div>
+      <div class="card">d</div>
+      <div class="card">e</div>
+      <div class="card">f</div>
+      <div class="card">g</div>
+      <div class="card">h</div>
+      <div class="card">i</div>
+      <div class="card">j</div>
+      <div class="card">k</div>
+      <div class="card">l</div>
+      <div class="card">main</div>
+    </section>
+  </body>
 </html>
