@@ -1,9 +1,17 @@
+import { motion } from "framer-motion";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello World</h1>
+      <motion.button
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+        className="save-button"
+        onClick={() => null}
+      >
+        Open Modal
+      </motion.button>
     </div>
   );
 }
