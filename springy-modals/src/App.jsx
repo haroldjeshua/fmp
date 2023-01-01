@@ -2,12 +2,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import "./App.css";
 import Modal from "./components/Modal";
+import useModal from "./hooks/useModal";
 
 function App() {
-  const [modalOpen, setModalOpen] = useState(false);
-
-  const close = () => setModalOpen(false);
-  const open = () => setModalOpen(true);
+  // Modal state
+  const { modalOpen, close, open } = useModal;
 
   // Modal Type
   const [modalType, setModalType] = useState("dropIn");
@@ -31,13 +30,20 @@ function App() {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           className="save-button"
-          onClick={() => (modalOpen ? close() : open())}
+          onClick={open}
         >
           Open Modal
         </motion.button>
 
         <ModalContainer>
-          {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} />}
+          {modalOpen && (
+            <Modal
+              modalOpen={modalOpen}
+              text={modalType}
+              type={modalType}
+              handleClose={close}
+            />
+          )}
         </ModalContainer>
       </motion.main>
     </>

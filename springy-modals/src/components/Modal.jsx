@@ -128,7 +128,7 @@ const Modal = ({ handleClose, text, type }) => {
       {type === "dropIn" && (
         <motion.div
           onClick={(e) => e.stopPropagation()} // Prevent click from closing modal
-          className="modal orange-gradient"
+          className="modal purple-gradient"
           variants={dropIn}
           initial="hidden"
           animate="visible"
@@ -142,7 +142,7 @@ const Modal = ({ handleClose, text, type }) => {
       {type === "flip" && (
         <motion.div
           onClick={(e) => e.stopPropagation()}
-          className="modal  orange-gradient"
+          className="modal  purple-gradient"
           variants={flip}
           initial="hidden"
           animate="visible"
@@ -156,7 +156,7 @@ const Modal = ({ handleClose, text, type }) => {
       {type === "newspaper" && (
         <motion.div
           onClick={(e) => e.stopPropagation()}
-          className="modal orange-gradient"
+          className="modal purple-gradient"
           variants={newspaper}
           initial="hidden"
           animate="visible"
@@ -170,7 +170,7 @@ const Modal = ({ handleClose, text, type }) => {
       {type === "badSuspension" && (
         <motion.div
           onClick={(e) => e.stopPropagation()}
-          className="modal orange-gradient"
+          className="modal purple-gradient"
           variants={badSuspension}
           initial="hidden"
           animate="visible"
@@ -235,7 +235,7 @@ const Modal = ({ handleClose, text, type }) => {
 
 const ModalText = ({ text }) => {
   <div className="modal-text">
-    <h3>text</h3>
+    <h3>{text}</h3>
     <h5>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dolorem
       iure praesentium error eligendi. Exercitationem dolores eligendi in
@@ -250,6 +250,7 @@ const ModalButton = ({ onClick, label }) => {
     type="button"
     whileHover={{ scale: 1.125 }}
     whileTap={{ scale: 0.95 }}
+    onClick={onClick}
   >
     {label}
   </motion.button>;
