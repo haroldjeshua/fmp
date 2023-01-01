@@ -22,21 +22,15 @@ body {
   overflow-y: hidden;
 }
 
-.App {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+main {
   width: 100vw;
   height: 100vh;
-}
-
-main {
-  margin: auto;
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  justify-content: center;
   align-items: center;
+  margin: auto;
+  padding: 2rem;
   overflow-y: hidden;
 }
 
@@ -97,6 +91,7 @@ kbd {
 button {
   width: auto;
   height: 3rem;
+  padding: 0.5rem;
   border: none;
   outline: none;
   -webkit-appearance: none;
@@ -106,6 +101,7 @@ button {
   letter-spacing: 1.25px;
   cursor: default;
   font-family: "Inter", sans-serif;
+  cursor: pointer;
 }
 
 .backdrop {
@@ -124,13 +120,12 @@ button {
 .modal {
   width: clamp(50%, 700px, 90%);
   height: min(50%, 300px);
-
-  margin: auto;
-  padding: 0 2rem;
-  border-radius: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: auto;
+  padding: 1.5rem;
+  border-radius: 12px;
 }
 
 .orange-gradient {
