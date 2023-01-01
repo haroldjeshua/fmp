@@ -3,6 +3,7 @@ import { useState } from "react";
 import "./App.css";
 import Modal from "./components/Modal";
 import useModal from "./hooks/useModal";
+import { framerLogger } from "./stateLogger";
 
 function App() {
   // Modal state
@@ -16,7 +17,7 @@ function App() {
     <>
       <motion.main>
         <Header />
-        <SubHeader />
+        <SubHeader text="Animated Modals" />
 
         <motion.select className="input" onChange={handleType}>
           <option value="dropIn">Drop In</option>
@@ -34,18 +35,18 @@ function App() {
         >
           Open Modal
         </motion.button>
-
-        <ModalContainer>
-          {modalOpen && (
-            <Modal
-              modalOpen={modalOpen}
-              text={modalType}
-              type={modalType}
-              handleClose={close}
-            />
-          )}
-        </ModalContainer>
       </motion.main>
+
+      <ModalContainer>
+        {modalOpen && (
+          <Modal
+            modalOpen={modalOpen}
+            text={modalType}
+            type={modalType}
+            handleClose={close}
+          />
+        )}
+      </ModalContainer>
     </>
   );
 }
@@ -68,7 +69,7 @@ const ModalContainer = ({ children, label }) => (
     // Only render one comp at a time. The exiting component will finish its exit animation before component is rendered
     mode="wait"
     // Fires when all exiting nodes have completed animating out
-    onExitComplete={() => null}
+    onExitComplete={() => framerLogger(label)}
   >
     {children}
   </AnimatePresence>
