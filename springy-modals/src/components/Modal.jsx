@@ -33,8 +33,10 @@ const Modal = ({ handleClose, text }) => {
         animate="visible"
         exit="exit"
       >
-        <ModalText text={text} />
-        <ModalButton onClick={handleClose} label="Close" />
+        {/* <ModalText text={text} />
+        <ModalButton onClick={handleClose} label="Close" /> */}
+        <p>{text}</p>
+        <button onClick={handleClose}>Close</button>
       </motion.div>
     </Backdrop>
   );
