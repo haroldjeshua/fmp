@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap);
 
 :root {
   --dark: #101315;
@@ -11,13 +11,18 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   background: var(--dark);
-  font-family: "Montserrat", sans-serif;
+  font-family: "Inter", sans-serif;
   height: 100%;
   overflow-y: hidden;
+}
+
+.App {
 }
 
 main {
@@ -33,14 +38,14 @@ h1 {
   color: #ff9d00;
   font-size: 175%;
   font-weight: 400;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 h2 {
   font-weight: 500;
   font-size: 150%;
   letter-spacing: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 h3 {
@@ -49,7 +54,7 @@ h3 {
   font-weight: 700;
   font-size: 2rem;
   letter-spacing: 1px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Inter", sans-serif;
   padding: 2rem 0 1.5rem 0;
   margin: 0;
   text-transform: capitalize;
@@ -62,7 +67,7 @@ h5 {
   font-size: 130%;
   text-align: justify;
   letter-spacing: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Inter", sans-serif;
   padding: 0;
   line-height: 125%;
   margin: 0;
@@ -94,7 +99,7 @@ button {
   font-size: 1.25rem;
   letter-spacing: 1.25px;
   cursor: default;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .backdrop {
@@ -154,7 +159,6 @@ button {
 
 .save-button {
   padding: 0 1rem;
-  margin: 2rem auto auto 0;
   background: var(--gradient);
   color: var(--dark);
 }
@@ -184,7 +188,7 @@ input {
   color: #ff9d00;
   font-size: 1.25rem;
   font-weight: 400;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 ::placeholder {
@@ -241,7 +245,7 @@ li {
   font-size: 100%;
   font-weight: 600;
   letter-spacing: 0.25px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .add-button {

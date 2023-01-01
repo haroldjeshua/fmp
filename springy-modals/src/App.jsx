@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import "./App.css";
 import Modal from "./components/Modal";
@@ -20,7 +20,16 @@ function App() {
         Open Modal
       </motion.button>
 
-      {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} />}
+      <AnimatePresence
+        // Disable any initial animations on children that are present when the component is first rendered
+        initial={false}
+        // Only render one comp at a time. The exiting component will finish its exit animation before component is rendered
+        mode="wait"
+        // Fires when all exiting nodes have completed animating out
+        onExitComplete={() => null}
+      >
+        {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} />}
+      </AnimatePresence>
     </div>
   );
 }
