@@ -32,25 +32,23 @@ const ThemeIcon = () => {
   return (
     <span onClick={handleMode}>
       {darkTheme ? (
-        <FaSun size="24" className="top-navigation-icon" />
+        <FaSun size="24" className="top-nav-icon" />
       ) : (
-        <FaMoon size="24" className="top-navigation-icon" />
+        <FaMoon size="24" className="top-nav-icon" />
       )}
     </span>
   );
 };
 
-const Search = () => {
+const Search = () => (
   <div className="search">
     <input className="search-input" type="text" placeholder="Search..." />
     <FaSearch size="18" className="text-secondary my-auto" />
-  </div>;
-};
-
-const BellIcon = () => <FaRegBell size="24" className="top-navigation-icon" />;
-
-const UserCircle = () => (
-  <FaUserCircle size="24" className="top-navigation-icon" />
+  </div>
 );
+
+const BellIcon = () => <FaRegBell size="24" className="top-nav-icon" />;
+
+const UserCircle = () => <FaUserCircle size="24" className="top-nav-icon" />;
 
 export default TopNav;

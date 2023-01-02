@@ -9,7 +9,7 @@ import { FaPoo } from "react-icons/fa";
 
 const Sidebar = () => {
   return (
-    <div className="fixed top-0 left-0 h-screen w-16 m-0 flex flex-col bg-gray-900 text-white shadow-lg">
+    <div className="fixed top-0 left-0 h-screen w-16 m-0 flex flex-col bg-white dark:bg-gray-900 shadow-lg">
       <SidebarIcon icon={<AiTwotoneFire size="32" />} text="Home" />
       <Divider />
       <SidebarIcon icon={<AiOutlinePlus size="32" />} text="Add" />
