@@ -70,4 +70,45 @@
   .dropdown-selection-text {
     @apply text-gray-500 font-semibold tracking-wide mr-auto transition duration-100 ease-in-out hover:text-pink-500 dark:hover:text-gray-500 cursor-pointer;
   }
+
+  .content-container {
+    @apply flex flex-col bg-gray-300 dark:bg-gray-700 w-full h-full m-0 overflow-hidden;
+  }
+
+  .content-list {
+    @apply flex flex-col items-center w-full h-full mt-0 mb-0 mx-auto px-0 pb-12 overflow-y-scroll;
+  }
+
+  .post {
+    @apply w-full flex flex-row items-center justify-evenly m-0 py-4 px-8 cursor-pointer;
+  }
+
+  .post-selected {
+    @apply bg-green-400 dark:bg-gray-900
+    shadow-md;
+  }
+
+  .post-content {
+    @apply w-4/5 flex flex-col justify-start ml-auto;
+  }
+
+  .post-text {
+    @apply text-lg text-left text-gray-800 dark:text-white mr-auto whitespace-normal;
+  }
+
+  .post-author {
+    @apply text-lg text-left text-gray-800 dark:text-white mr-auto whitespace-normal;
+  }
+
+  .avatar-wrapper {
+    @apply flex flex-col items-center w-12 m-0 ml-auto mb-auto;
+  }
+
+  .avatar {
+    @apply flex-none w-16 h-full rounded-full object-cover bg-gray-100 mb-auto mt-0 mx-0 shadow-md cursor-pointer;
+  }
+
+  .timestamp {
+    @apply text-xs text-left font-semibold text-gray-500 dark:text-gray-600 ml-2;
+  }
 }
