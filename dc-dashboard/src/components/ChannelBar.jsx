@@ -24,7 +24,7 @@ const Dropdown = ({ header, selections }) => {
   return (
     <div className="dropdown">
       <ChannelBlock />
-      <div className="dropdon-header" onClick={() => setExpanded(!expanded)}>
+      <div className="dropdown-header" onClick={() => setExpanded(!expanded)}>
         <ChevronIcon expanded={expanded} />
         <h5
           className={
