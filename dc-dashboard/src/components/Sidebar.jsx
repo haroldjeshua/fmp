@@ -18,7 +18,12 @@ const Sidebar = () => {
   );
 };
 
-const SidebarIcon = ({ icon }) => <div className="sidebar-icon">{icon}</div>;
+const SidebarIcon = ({ icon, text = "tooltip 💡" }) => (
+  <div className="sidebar-icon">
+    {icon}
+    <span className="sidebar-tooltip">{text}</span>
+  </div>
+);
 
 const Divider = () => <hr className="sidebar-hr" />;
 
