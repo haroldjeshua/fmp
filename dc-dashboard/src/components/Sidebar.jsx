@@ -9,16 +9,19 @@ import { FaPoo } from "react-icons/fa";
 const Sidebar = () => {
   return (
     <div className="fixed top-0 left-0 h-screen w-16 m-0 flex flex-col bg-gray-900 text-white shadow-lg">
-      <SidebarIcon icon={<AiTwotoneFire size="32" />} />
-      <SidebarIcon icon={<AiOutlinePlus size="32" />} />
-      <SidebarIcon icon={<AiFillThunderbolt size="32" />} />
-      <SidebarIcon icon={<FaPoo size="32" />} />
+      <SidebarIcon icon={<AiTwotoneFire size="32" />} text="Home" />
+      <SidebarIcon icon={<AiOutlinePlus size="32" />} text="Add" />
+      <SidebarIcon
+        icon={<AiFillThunderbolt size="32" />}
+        text="Blazingly fast"
+      />
+      <SidebarIcon icon={<FaPoo size="32" />} text="Poo" />
       <Divider />
     </div>
   );
 };
 
-const SidebarIcon = ({ icon, text = "tooltip 💡" }) => (
+const SidebarIcon = ({ icon, text }) => (
   <div className="sidebar-icon group">
     {icon}
     <span className="sidebar-tooltip group-hover:scale-100">{text}</span>
