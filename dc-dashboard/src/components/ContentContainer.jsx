@@ -1,9 +1,10 @@
 import { BsPlusCircleFill } from "react-icons/bs";
+import TopNav from "./TopNav";
 
 const ContentContainer = () => {
   return (
     <div className="content-container">
-      {/* <TopNavigation /> */}
+      <TopNav />
       <div className="content-list">
         <Post
           name="Harold"
