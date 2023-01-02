@@ -9,6 +9,7 @@ const random = ["plugins", "variants", "libraries"];
 const ChannelBar = () => {
   return (
     <div className="channel-bar shadow-lg">
+      <ChannelBlock />
       <div className="channel-container">
         <Dropdown header="Topics" selections={topics} />
         <Dropdown header="Questions" selections={questions} />
@@ -23,7 +24,6 @@ const Dropdown = ({ header, selections }) => {
 
   return (
     <div className="dropdown">
-      <ChannelBlock />
       <div className="dropdown-header" onClick={() => setExpanded(!expanded)}>
         <ChevronIcon expanded={expanded} />
         <h5

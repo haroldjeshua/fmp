@@ -111,4 +111,12 @@
   .timestamp {
     @apply text-xs text-left font-semibold text-gray-500 dark:text-gray-600 ml-2;
   }
+
+  .bottom-bar {
+    @apply flex flex-row items-center justify-between fixed left-88 right-8 bottom-2 h-12 bg-gray-400 dark:bg-gray-600 px-2 rounded-lg shadow-lg;
+  }
+
+  .bottom-bar-input {
+    @apply font-semibold w-full bg-transparent outline-none ml-0 mr-auto text-gray-500 dark:text-gray-400 placeholder-gray-500 cursor-text;
+  }
 }

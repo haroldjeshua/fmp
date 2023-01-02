@@ -87,7 +87,7 @@ const Post = ({ name, timestamp, text }) => {
   );
 };
 
-const BottomBar = () => {
+const BottomBar = () => (
   <div className="bottom-bar">
     <PlusIcon />
 
@@ -96,14 +96,14 @@ const BottomBar = () => {
       placeholder="Enter your message..."
       className="bottom-bar-input"
     />
-  </div>;
-};
+  </div>
+);
 
-const PlusIcon = () => {
+const PlusIcon = () => (
   <BsPlusCircleFill
     size="22"
     className="text-green-500 dark:shadow-lg mx-2 dark:text-primary"
-  />;
-};
+  />
+);
 
 export default ContentContainer;

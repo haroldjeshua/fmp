@@ -1,5 +1,5 @@
-import Sidebar from "./components/Sidebar";
 import "./App.css";
+import Sidebar from "./components/Sidebar";
 import ChannelBar from "./components/ChannelBar";
 import ContentContainer from "./components/ContentContainer";
 
