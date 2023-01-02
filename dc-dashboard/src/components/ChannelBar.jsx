@@ -40,7 +40,9 @@ const Dropdown = ({ header, selections }) => {
       </div>
       {expanded &&
         selections &&
-        selections.map((selection) => <TopicSelection selection={selection} />)}
+        selections.map((selection) => (
+          <TopicSelection key={selection.toString()} selection={selection} />
+        ))}
     </div>
   );
 };
@@ -49,9 +51,9 @@ const ChevronIcon = ({ expanded }) => {
   const chevronClass = "text-accent text-opacity-75 my-auto mr-1";
 
   return expanded ? (
-    <FaChevronDown size="16" className={chevronClass} />
+    <FaChevronDown size="14" className={chevronClass} />
   ) : (
-    <FaChevronRight size="16" className={chevronClass} />
+    <FaChevronRight size="14" className={chevronClass} />
   );
 };
 
