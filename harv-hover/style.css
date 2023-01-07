@@ -101,6 +101,7 @@ h1 {
     var(--purple)
   );
   background-size: 1000%;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: background-pan 150s linear infinite;
