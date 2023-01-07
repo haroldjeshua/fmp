@@ -1,23 +1,8 @@
 import "./style.css";
 
-const pickLetters = (id) => {
-  const element = document.querySelector(id);
-  const text = element.innerText.split("");
-
-  element.innerText = "";
-  console.log(element);
-
-  text.forEach((letter) => {
-    const span = document.createElement("span");
-
-    span.className = "letter";
-    span.innerText = letter;
-
-    element.appendChild(span);
-  });
+const rand = (min, max) => {
+  Math.floor(Math.random() * (max - min + 1)) + min;
 };
-
-// pickLetters("#word-hover");
 
 const enhanceLinks = (ref) => {
   const elements = document.querySelectorAll(ref);
@@ -33,7 +18,7 @@ const enhanceLinks = (ref) => {
 
       const inner = document.createElement("span");
       inner.className = "inner";
-      inner.style.animationDelay = "250ms";
+      inner.style.animationDelay = `${rand(-5000, 0)}ms`;
 
       const letter = document.createElement("span");
       letter.className = "letter";
