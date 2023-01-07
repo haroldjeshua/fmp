@@ -77,11 +77,13 @@ h1 {
   opacity: 0.2;
 }
 
-.link > .letter {
+.link > span {
   display: inline-block;
-  transition: transform 400ms ease;
 }
 
+.link > .outer {
+  transition: transform 400ms ease;
+}
 .link:hover > .letter {
   transition-duration: 800ms;
 }
