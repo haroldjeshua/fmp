@@ -32,9 +32,24 @@ a {
 }
 
 h1 {
+  font-size: clamp(4vw, 6vw, 8vw);
   margin: 0;
 }
 
 .hero-panel {
   text-transform: uppercase;
+}
+
+.word {
+  transition: opacity 0.2s ease;
+}
+
+.line {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.intro:has(.link:hover) .word:not(.link) {
+  opacity: 0.2;
 }
