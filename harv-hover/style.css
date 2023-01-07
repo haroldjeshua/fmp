@@ -58,3 +58,29 @@ h1 {
 .link > .letter {
   display: inline-block;
 }
+
+.link:hover > .letter {
+  transition-duration: 800ms;
+}
+
+.link:hover > .letter:nth-child(1) {
+  transform: translate(-50%, 50%) rotate(8deg);
+}
+.link:hover > .letter:nth-child(2) {
+  transform: translate(-40%, 20%) rotate(6deg);
+}
+.link:hover > .letter:nth-child(3) {
+  transform: translate(-20%, -20%) rotate(-4deg);
+}
+.link:hover > .letter:nth-child(4) {
+  transform: translate(0%, 10%) rotate(-8deg);
+}
+.link:hover > .letter:nth-child(5) {
+  transform: translate(0%, -20%) rotate(-4deg);
+}
+.link:hover > .letter:nth-child(6) {
+  transform: translate(0%, 20%) rotate(5deg);
+}
+.link:hover > .letter:nth-child(7) {
+  transform: translate(0%, 40%) rotate(10deg);
+}
