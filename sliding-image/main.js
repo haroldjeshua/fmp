@@ -15,14 +15,20 @@ const handleMouseOnMove = (e) => {
   const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX;
   const maxMouseDelta = window.innerWidth / 2;
 
-  const percentage = (mouseDelta / maxMouseDelta) * 100;
-  const nextPercentage = Math.max(Math.min(50, 0), -100);
+  const percentage = (mouseDelta / maxMouseDelta) * -100;
+  const nextPercentageUnconstrained =
+    parseFloat(track.dataset.prevPercentage) + percentage;
+  console.log("next%: " + nextPercentageUnconstrained);
+  const nextPercentage = Math.max(
+    Math.min(nextPercentageUnconstrained, 0),
+    -100
+  );
 
   track.dataset.percentage = nextPercentage;
 
   track.animate(
     {
-      transform: `translate(${nextPercentage}%, 50%)`,
+      transform: `translate(${nextPercentage}%, -50%)`,
     },
     { duration: 1200, fill: "forwards" }
   );
@@ -36,6 +42,8 @@ const handleMouseOnMove = (e) => {
     );
   }
 };
+
+console.log(image);
 
 window.onmousedown = (e) => handleMouseOnDown(e);
 
