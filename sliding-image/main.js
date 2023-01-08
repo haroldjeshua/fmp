@@ -18,7 +18,6 @@ const handleMouseOnMove = (e) => {
   const percentage = (mouseDelta / maxMouseDelta) * -100;
   const nextPercentageUnconstrained =
     parseFloat(track.dataset.prevPercentage) + percentage;
-  console.log("next%: " + nextPercentageUnconstrained);
   const nextPercentage = Math.max(
     Math.min(nextPercentageUnconstrained, 0),
     -100
@@ -33,7 +32,7 @@ const handleMouseOnMove = (e) => {
     { duration: 1200, fill: "forwards" }
   );
 
-  for (const image of track.querySelectorAll(".image")) {
+  for (const image of track.getElementsByClassName("image")) {
     image.animate(
       {
         objectPosition: `${100 + nextPercentage}% center`,
@@ -43,16 +42,11 @@ const handleMouseOnMove = (e) => {
   }
 };
 
-console.log(image);
-
 window.onmousedown = (e) => handleMouseOnDown(e);
-
 window.ontouchstart = (e) => handleMouseOnDown(e.touches[0]);
 
 window.onmouseup = (e) => handleMouseOnUp(e);
-
 window.ontouchend = (e) => handleMouseOnUp(e.touches[0]);
 
 window.onmousemove = (e) => handleMouseOnMove(e);
-
 window.ontouchmove = (e) => (handleMouseOnMove = e.touches[0]);
