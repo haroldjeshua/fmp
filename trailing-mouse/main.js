@@ -35,7 +35,9 @@ window.onmousemove = (e) => {
 
   animateTrailer(e, interacting);
 
+  trailer.dataset.type = interacting ? interactable.dataset.type : "";
+
   if (interacting) {
-    icon.className = getTrailerClass(interactable.dataset.type);
+    icon.className += getTrailerClass(interactable.dataset.type);
   }
 };
