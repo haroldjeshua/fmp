@@ -43,3 +43,8 @@ body:hover > .trailing-mouse {
   aspect-ratio: 1 / 1.25;
   opacity: 0.4;
 }
+
+.cards .interactable:hover {
+  background-size: 100%;
+  opacity: 0.8;
+}
