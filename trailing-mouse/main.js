@@ -2,7 +2,7 @@ import "./style.css";
 
 const trailer = document.querySelector(".trailing-mouse");
 
-window.onmousemove = (e) => {
+const animateTrailer = (e, interacting) => {
   const x = e.clientX - trailer.offsetWidth / 2;
   const y = e.clientY - trailer.offsetHeight / 2;
 
@@ -10,11 +10,18 @@ window.onmousemove = (e) => {
 
   // web animation api
   const keyframes = {
-    transform: `translate(${x}px, ${y}px)`,
+    transform: `translate(${x}px, ${y}px) scale(${interacting ? 0 : 1})`,
   };
 
   trailer.animate(keyframes, {
     duration: 400,
     fill: "forwards",
   });
+};
+
+window.onmousemove = (e) => {
+  const interactable = e.target.closest(".interactable");
+  const interacting = interactable !== null;
+
+  animateTrailer(e, interacting);
 };
