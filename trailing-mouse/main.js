@@ -10,7 +10,7 @@ const animateTrailer = (e, interacting) => {
 
   // web animation api
   const keyframes = {
-    transform: `translate(${x}px, ${y}px) scale(${interacting ? 0 : 1})`,
+    transform: `translate(${x}px, ${y}px) scale(${interacting ? 8 : 1})`,
   };
 
   trailer.animate(keyframes, {
