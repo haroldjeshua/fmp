@@ -18,3 +18,108 @@ body {
   margin: 0;
   overflow: hidden;
 }
+
+.canvas {
+  width: 140vmax;
+  height: 140vmax;
+  position: absolute;
+}
+
+.tile {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1vmax;
+  transition: transform 400ms ease;
+}
+
+.tile:hover {
+  transform: scale(1.25);
+}
+
+.tile:hover > h3 {
+  /* > img */
+  opacity: 1;
+  transform: scale(1.125);
+}
+
+/* 
+.tile > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 800ms ease,
+    transform 800ms ease;
+} */
+.tile > h3 {
+  font-size: 2rem;
+  opacity: 0;
+  transition: opacity 800ms ease, transform 800ms ease;
+}
+
+.tile:nth-child(1) {
+  background-color: hsl(206, 94%, 13%);
+  height: 14%;
+  width: 20%;
+  left: 5%;
+  top: 5%;
+}
+
+.tile:nth-child(2) {
+  background-color: hsl(195, 96%, 18%);
+  height: 24%;
+  width: 14%;
+  left: 42%;
+  top: 12%;
+}
+
+.tile:nth-child(3) {
+  background-color: hsl(186, 95%, 24%);
+  height: 18%;
+  width: 16%;
+  left: 12%;
+  top: 34%;
+}
+
+.tile:nth-child(4) {
+  background-color: hsl(175, 95%, 30%);
+  height: 14%;
+  width: 12%;
+  left: 45%;
+  top: 48%;
+}
+
+.tile:nth-child(5) {
+  background-color: hsl(166, 96%, 36%);
+  height: 16%;
+  width: 32%;
+  left: 8%;
+  top: 70%;
+}
+
+.tile:nth-child(6) {
+  background-color: hsl(156, 95%, 41%);
+  height: 24%;
+  width: 24%;
+  left: 68%;
+  top: 8%;
+}
+
+.tile:nth-child(7) {
+  background-color: hsl(156, 72%, 49%);
+  height: 16%;
+  width: 20%;
+  left: 50%;
+  top: 74%;
+}
+
+.tile:nth-child(8) {
+  background-color: hsl(154, 76%, 67%);
+  height: 24%;
+  width: 18%;
+  left: 72%;
+  top: 42%;
+}
