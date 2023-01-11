@@ -63,8 +63,6 @@ main {
 
 .navbar-item {
   width: 100%;
-  display: flex;
-  justify-content: center;
 }
 
 .navbar-item:last-child {
@@ -85,8 +83,9 @@ main {
 }
 
 .navbar-link svg {
-  min-width: 2rem;
-  /* margin: 0 1.5rem ; */
+  width: 3.2rem;
+  min-width: 3.2rem;
+  margin: 0 1.5rem;
 }
 
 .navbar:hover {
