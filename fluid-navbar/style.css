@@ -99,14 +99,6 @@ main {
   stroke: var(--main);
 }
 
-.navbar:hover {
-  width: 256px;
-}
-
-.navbar:hover .link-text {
-  display: block;
-}
-
 .icon-tabler {
   color: var(--main);
   transition: var(--transition-speed);
@@ -123,11 +115,67 @@ main {
   width: 100%;
 }
 
+.logo-text {
+  display: none;
+  transition: var(--transition-speed);
+}
+
 .logo svg {
   transform: rotate(0deg);
   transition: transform var(--transition-speed) ease;
 }
 
 .navbar:hover .logo svg {
-  transform: rotate(-180deg);
+  transform: rotate(-360deg);
+}
+
+/*  small screens */
+@media only screen and (max-width: 600px) {
+  .navbar {
+    bottom: 0;
+    width: 100vw;
+    height: 6.4rem;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .navbar-list {
+    flex-direction: row;
+  }
+
+  .navbar-link {
+    justify-content: center;
+  }
+
+  main {
+    margin: 0;
+  }
+}
+/*  large screens */
+@media only screen and (min-width: 600px) {
+  .navbar {
+    top: 0;
+    width: 6.4rem;
+    height: 100vh;
+  }
+
+  .navbar:hover {
+    width: 256px;
+  }
+
+  .navbar:hover .logo-text,
+  .navbar:hover .link-text {
+    display: block;
+  }
+
+  .navbar:hover .logo span {
+    left: 0;
+  }
+
+  .navbar:hover .link-text {
+    display: inline;
+    transition: opacity var(--transition-speed);
+  }
 }
