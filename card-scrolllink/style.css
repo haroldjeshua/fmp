@@ -47,4 +47,74 @@ line {
 
 article {
   width: var(--card-size, 300px);
+  aspect-ratio: 3 / 4;
+  background-color: var(--surface-4);
+  border-radius: var(--radius-3);
+  position: relative;
+  overflow: hidden;
+  scale: 0.8;
+  animation-timeline: --item;
+  animation: scalify both ease-in-out;
+  animation-delay: cover 40%;
+  animation-end-delay: 60%;
+}
+
+@keyframes scalify {
+  50% {
+    scale: 1;
+    background-position: 100% 100%;
+  }
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  filter: grayscale();
+  background-image: var(--bg);
+  background-position: 0% 50%;
+  animation-timeline: --item;
+  animation: colorify both ease-in-out, shift-bg both linear;
+  animation-delay: cover 40%, contain 0%;
+  animation-end-delay: cover 60%, contain 100%;
+}
+
+@keyframes colorify {
+  50% {
+    filter: grayscale(0);
+  }
+}
+
+@keyframes shift-bg {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.word {
+  clip-path: inset(0 0 0 0);
+}
+
+span > span {
+  display: inline-block;
+  translate: 0 100%;
+  animation-timeline: --item;
+  animation: move-on-up both ease-in-out;
+  animation-delay: cover 40%;
+  animation-end-delay: cover 60%;
+}
+
+@keyframes move-on-up {
+  0% {
+    translate: 0 100%;
+  }
+  50% {
+    translate: 0 0;
+  }
+  100% {
+    translate: 0 -100%;
+  }
 }
