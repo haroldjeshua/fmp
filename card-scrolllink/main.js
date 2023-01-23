@@ -1,5 +1,8 @@
 import "./style.css";
 
+const dataTemplate = document.querySelector("[data-template]");
+const dataContainer = document.querySelector("[data-container]");
+
 const slides = [
   {
     title: "Nature",
@@ -52,3 +55,14 @@ const slides = [
       "https://images.unsplash.com/photo-1611280422374-fa3c1110c16e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80",
   },
 ];
+
+slides.map((slide) => {
+  const slideItem = dataTemplate.content.cloneNode(true).children[0];
+  const bg = slideItem.querySelector("[data-bg]");
+  const title = slideItem.querySelector("[data-word]");
+  bg.style.setProperty("--bg", `url(${slide.background})`);
+  title.textContent = slide.title;
+  dataContainer.append(slideItem);
+  console.log(slide.background);
+  return { bg: slide.bg, title: slide.title, element: slideItem };
+});
