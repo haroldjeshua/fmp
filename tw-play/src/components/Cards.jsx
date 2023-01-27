@@ -1,5 +1,3 @@
-import React from "react";
-
 const Cards = () => {
   const data = [
     {
@@ -8,6 +6,7 @@ const Cards = () => {
       subheading: "https://twitter.com/surjithctly",
     },
   ];
+
   return <div>Cards</div>;
 };
 
