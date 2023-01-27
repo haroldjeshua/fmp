@@ -2,7 +2,7 @@ import { TbBrandTailwind } from "react-icons/tb";
 
 const Header = () => {
   return (
-    <div className="flex flex-col items-center">
+    <div className="w-screen min-w-lg flex flex-col justify-center items-center">
       <h1 className="text-5xl flex flex-col items-center gap-4">
         <TbBrandTailwind /> Tailwind Playground
       </h1>
