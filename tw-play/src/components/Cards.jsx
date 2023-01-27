@@ -33,7 +33,13 @@ const Cards = () => {
       id: 2,
       icon: "456",
       heading: "Multi-Level Dropdown Menu",
-      subheading: "Created by Surjith S M",
+      subheading: "Inspired from Chromebook Menu",
+    },
+    {
+      id: 3,
+      icon: "789",
+      heading: "CSS Spinners",
+      subheading: "Remix from Surjith S M",
     },
   ];
 
