@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="flex flex-col w-full h-full bg-neutral-900/50">
       <Header />
-      <Cards />
+      <Route path="/card/:id" component={Cards} />
     </div>
   );
 }
