@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 const Cards = () => {
   const cardsRef = useRef(null);
@@ -40,6 +41,36 @@ const Cards = () => {
       icon: "789",
       heading: "CSS Spinners",
       subheading: "Remix from Surjith S M",
+    },
+    {
+      id: 4,
+      icon: "123",
+      heading: "Animated Loading Skeleton",
+      subheading: "Credits: @delba_oliveira ",
+    },
+    {
+      id: 4,
+      icon: "123",
+      heading: "Animated Loading Skeleton",
+      subheading: "Credits: @delba_oliveira ",
+    },
+    {
+      id: 4,
+      icon: "123",
+      heading: "Animated Loading Skeleton",
+      subheading: "Credits: @delba_oliveira ",
+    },
+    {
+      id: 4,
+      icon: "123",
+      heading: "Animated Loading Skeleton",
+      subheading: "Credits: @delba_oliveira ",
+    },
+    {
+      id: 4,
+      icon: "123",
+      heading: "Animated Loading Skeleton",
+      subheading: "Credits: @delba_oliveira ",
     },
   ];
 
