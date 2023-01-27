@@ -47,17 +47,19 @@ const Cards = () => {
         className="cards w-screen max-w-3xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4"
       >
         {cardData.map((card, idx) => (
-          <div key={`card-${idx.toString().padStart(2, "0")}`} className="card">
-            <div className="card-content">
-              <div className="card-icon mb-2">{`${idx
-                .toString()
-                .padStart(2, "0")}`}</div>
-              <div className="flex flex-col gap-2">
-                <h2 className="text-lg leading-tight">{card.heading}</h2>
-                <p className="text-xs">{card.subheading}</p>
+          <Link key={idx} to={`/card/${card.id}`}>
+            <div className="card">
+              <div className="card-content">
+                <div className="card-icon mb-2">{`${idx
+                  .toString()
+                  .padStart(2, "0")}`}</div>
+                <div className="flex flex-col gap-2">
+                  <h2 className="text-lg leading-tight">{card.heading}</h2>
+                  <p className="text-xs">{card.subheading}</p>
+                </div>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </BrowserRouter>
