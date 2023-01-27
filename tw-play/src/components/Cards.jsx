@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 const Cards = () => {
   const cardsRef = useRef(null);
@@ -41,12 +41,13 @@ const Cards = () => {
   ];
 
   return (
-    <BrowserRouter>
+    <Router>
       <div
         ref={cardsRef}
         className="cards w-screen max-w-3xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4"
       >
         {cardData.map((card, idx) => (
+          // /card/${idx.toString().padStart(2, "0")}
           <Link key={idx} to={`/card/${card.id}`}>
             <div className="card">
               <div className="card-content">
@@ -62,7 +63,7 @@ const Cards = () => {
           </Link>
         ))}
       </div>
-    </BrowserRouter>
+    </Router>
   );
 };
 
