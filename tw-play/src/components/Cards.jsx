@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 const Cards = () => {
   const cardsRef = useRef(null);
@@ -29,41 +28,35 @@ const Cards = () => {
       icon: "123",
       heading: "Linear-esque Gradient  + Copy",
       subheading: "Credits: linear.com & @FonsMans",
-      url: "/",
     },
     {
       id: 2,
       icon: "456",
       heading: "Multi-Level Dropdown Menu",
       subheading: "Created by Surjith S M",
-      url: "/",
     },
   ];
 
   return (
-    <Router>
-      <div
-        ref={cardsRef}
-        className="cards w-screen max-w-3xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4"
-      >
-        {cardData.map((card, idx) => (
-          // /card/${idx.toString().padStart(2, "0")}
-          <Link key={idx} to={`/card/${card.id}`}>
-            <div className="card">
-              <div className="card-content">
-                <div className="card-icon mb-2">{`${idx
-                  .toString()
-                  .padStart(2, "0")}`}</div>
-                <div className="flex flex-col gap-2">
-                  <h2 className="text-lg leading-tight">{card.heading}</h2>
-                  <p className="text-xs">{card.subheading}</p>
-                </div>
-              </div>
+    <div
+      ref={cardsRef}
+      className="cards w-screen max-w-3xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4"
+    >
+      {cardData.map((card, idx) => (
+        // /card/${idx.toString().padStart(2, "0")}
+        <div key={idx} className="card">
+          <div className="card-content">
+            <div className="card-icon mb-2">{`${(idx + 1)
+              .toString()
+              .padStart(2, "0")}`}</div>
+            <div className="flex flex-col gap-2">
+              <h2 className="text-lg leading-tight">{card.heading}</h2>
+              <p className="text-xs">{card.subheading}</p>
             </div>
-          </Link>
-        ))}
-      </div>
-    </Router>
+          </div>
+        </div>
+      ))}
+    </div>
   );
 };
 
