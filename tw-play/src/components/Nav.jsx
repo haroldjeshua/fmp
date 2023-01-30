@@ -3,7 +3,7 @@ import { Link, Route, Routes } from "react-router-dom";
 const Nav = () => {
   return (
     <nav className="absolute top-0 left-0 w-screen h-12 flex justify-center items-center gap-4 bg-card-color border-b-2 border-border-color z-[2]">
-      <ul className="flex gap-4">
+      <ul className="w-full max-w-3xl mx-auto flex justify-between gap-4">
         <li>
           <Link to="/">Home</Link>
         </li>

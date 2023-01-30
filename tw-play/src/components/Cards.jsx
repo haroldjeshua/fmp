@@ -47,7 +47,7 @@ const Cards = () => {
     {
       id: 5,
       heading: "Frosted Glass Effect",
-      subheading: "ZhaoXing / dribbble",
+      subheading: "Credits: ZhaoXing / dribbble",
     },
   ];
 
