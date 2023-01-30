@@ -1,12 +1,16 @@
-import { useOutletContext, useParams } from "react-router-dom";
+import { cardData } from "../data";
 
 const Card = () => {
   const { id } = useParams();
-  const obj = useOutletContext();
+  const card = cardData.find((card) => card.id === parseInt(id, 10));
+
+  if (!card) return <h1>Card Not Found</h1>;
+
   return (
-    <h1>
-      Card {id} ({obj.hello})
-    </h1>
+    <div>
+      <h1>{card.heading}</h1>
+      <p>{card.subheading}</p>
+    </div>
   );
 };
 

@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useParams, Link } from "react-router-dom";
+import { cardData } from "../data";
 
 const Cards = () => {
   const cardsRef = useRef(null);
@@ -23,41 +24,12 @@ const Cards = () => {
     };
   }, []);
 
-  const cardData = [
-    {
-      id: 1,
-      heading: "Linear-esque Gradient  + Copy",
-      subheading: "Credits: linear.com & @FonsMans",
-    },
-    {
-      id: 2,
-      heading: "Multi-Level Dropdown Menu",
-      subheading: "Inspired from Chromebook Menu",
-    },
-    {
-      id: 3,
-      heading: "CSS Spinners",
-      subheading: "Remix from Surjith S M",
-    },
-    {
-      id: 4,
-      heading: "Animated Loading Skeleton",
-      subheading: "Credits: @delba_oliveira ",
-    },
-    {
-      id: 5,
-      heading: "Frosted Glass Effect",
-      subheading: "Credits: ZhaoXing / dribbble",
-    },
-  ];
-
   return (
     <div
       ref={cardsRef}
       className="cards w-full max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-4"
     >
       {cardData.map((card, idx) => (
-        // /card/${idx.toString().padStart(2, "0")}
         <Link key={idx + 1} to={`/card/${idx + 1}`}>
           <div className="card">
             <div className="card-content">

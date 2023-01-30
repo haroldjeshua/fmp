@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
+import CardRoutes from "./routes/CardRoutes";
 import Nav from "./components/Nav";
-import Cards from "./components/Cards";
-import Home from "./pages/Home";
+import Home from "./components/Home";
 import "./App.css";
-import CardRoutes from "./pages/CardRoutes";
 
 function App() {
   const [navHidden, setNavHidden] = useState(false);
