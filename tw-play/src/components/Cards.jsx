@@ -77,7 +77,7 @@ const Cards = () => {
   return (
     <div
       ref={cardsRef}
-      className="cards w-screen max-w-3xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4"
+      className="cards w-full max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-4"
     >
       {cardData.map((card, idx) => (
         // /card/${idx.toString().padStart(2, "0")}
