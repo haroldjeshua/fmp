@@ -10,7 +10,7 @@ function App() {
   const [navHidden, setNavHidden] = useState(false);
 
   return (
-    <div className="flex flex-col w-full h-full bg-neutral-900/50 overflow-auto pb-16">
+    <div className="w-full h-full flex flex-col justify-center bg-neutral-900/50 overflow-auto pt-12 pb-16">
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />

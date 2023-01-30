@@ -1,6 +1,7 @@
 import React from "react";
 import Cards from "../components/Cards";
 import Card from "../components/Card";
+import { Route, Routes } from "react-router-dom";
 
 const CardRoutes = () => {
   return (
