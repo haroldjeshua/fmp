@@ -58,7 +58,7 @@ const Cards = () => {
     >
       {cardData.map((card, idx) => (
         // /card/${idx.toString().padStart(2, "0")}
-        <Link key={idx} to={`/card/${idx}`}>
+        <Link key={idx + 1} to={`/card/${idx + 1}`}>
           <div className="card">
             <div className="card-content">
               <div className="card-icon mb-2">{`${(idx + 1)
