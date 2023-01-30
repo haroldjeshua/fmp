@@ -10,8 +10,8 @@ const CardRoutes = () => {
     <>
       <Routes>
         <Route index element={<Cards />} />
-        <Route path="cards/:id" element={<Card />} />
-        <Route path="/cards/1" component={Card1} />
+        <Route path=":id" element={<Card />} />
+        <Route path="/cards/1" element={<Card1 />} />
         <Route path="/cards/2" element={<Card2 />} />
       </Routes>
     </>
