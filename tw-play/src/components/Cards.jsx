@@ -30,7 +30,7 @@ const Cards = () => {
       className="cards w-full max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-4"
     >
       {cardData.map((card, idx) => (
-        <Link key={idx + 1} to={`/card/${idx + 1}`}>
+        <Link key={idx + 1} to={`/cards/${idx + 1}`}>
           <div className="card">
             <div className="card-content">
               <div className="card-icon mb-2">{`${(idx + 1)
