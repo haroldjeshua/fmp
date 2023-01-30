@@ -17,8 +17,9 @@ function App() {
       <Nav />
       <Home />
       <Routes>
-        <Route exact path="/" element={<Cards />} />
-        <Route exact path="/card/:id" element={Card} />
+        <Route path="/" element={<Cards />} />
+        <Route path="/card/:id" element={<CardRoutes />} />
+        {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
     </div>
   );
