@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Cards from "./components/Cards";
 import CardPage from "./components/CardPage";
 import "./App.css";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -11,6 +12,9 @@ function App() {
       <Nav />
       <Header />
       <Cards />
+      <Routes>
+        <Route path="/" />
+      </Routes>
     </div>
   );
 }
