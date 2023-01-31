@@ -3,7 +3,7 @@ import { cardData } from "../data";
 
 const Card1 = () => {
   const { id } = useParams();
-  const card = cardData.find((card) => card.id === parseInt(id, 10));
+  const card = cardData.find((card) => card.id + 1 === parseInt(id, 10));
 
   if (!card) return <h1>Card Not Found</h1>;
 
