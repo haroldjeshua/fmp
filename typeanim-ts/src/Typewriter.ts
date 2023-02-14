@@ -12,6 +12,7 @@ export default class Typewriter {
     { loop = false, typingSpeed = 50, deletingSpeed = 50 } = {}
   ) {
     this.element = document.createElement("div");
+    this.element.classList.add("formatting");
     parent.append(this.element);
     this.loop = loop;
     this.typingSpeed = typingSpeed;
@@ -19,26 +20,56 @@ export default class Typewriter {
   }
 
   typeString(string: string) {
-    this.#queue.push(() => {
-      return new Promise((resolve) => {
-        let i = 0;
-        const interval = setInterval(() => {
-          this.element.append(string[i]);
-          i++;
-          if (i >= string.length) {
-            clearInterval(interval);
-            resolve();
-          }
-        }, this.typingSpeed);
-        this.element.append(string);
+    this.#addToQueue((resolve) => {
+      let i = 0;
+      const interval = setInterval(() => {
+        this.element.append(string[i]);
+        i++;
+        if (i >= string.length) {
+          clearInterval(interval);
+          resolve();
+        }
+      }, this.typingSpeed);
+      this.element.append(string);
 
-        resolve();
-      });
+      resolve();
     });
+
+    // this.#queue.push(() => {
+    //   return new Promise((resolve) => {
+    //     let i = 0;
+    //     const interval = setInterval(() => {
+    //       this.element.append(string[i]);
+    //       i++;
+    //       if (i >= string.length) {
+    //         clearInterval(interval);
+    //         resolve();
+    //       }
+    //     }, this.typingSpeed);
+    //     this.element.append(string);
+
+    //     resolve();
+    //   });
+    // });
     return this;
   }
   deleteChars(number: number) {
-    console.log(number);
+    this.#addToQueue((resolve) => {
+      let i = 0;
+      const interval = setInterval(() => {
+        this.element.innerText = this.element.innerText?.substring(
+          0,
+          this.element.innerText.length - 1
+        );
+        i++;
+        if (i >= number) {
+          clearInterval(interval);
+          resolve();
+        }
+      }, this.typingSpeed);
+
+      resolve();
+    });
 
     return this;
   }
@@ -62,5 +93,11 @@ export default class Typewriter {
       console.log(cb);
     });
     return this;
+  }
+
+  #addToQueue(cb: (resolve: () => void) => void) {
+    this.#queue.push(() => {
+      return new Promise(cb);
+    });
   }
 }

@@ -7,7 +7,7 @@ typewriter
   .typeString("Hello World")
   .pauseFor(1000)
   .typeString("\n\nhi clouds")
-  .deleteChars(5)
+  .deleteChars(7)
   .typeString("yoooo yoooo")
   .pauseFor(250)
   .deleteAll(10)
@@ -15,7 +15,7 @@ typewriter
   .pauseFor(1000)
   .typeString("\n\nme neither")
   .pauseFor(1000)
-  .typeString("\n\nawit lods")
+  .typeString("\n\nawit lods 123")
   .pauseFor(1000)
   .deleteAll(10)
   .start();
