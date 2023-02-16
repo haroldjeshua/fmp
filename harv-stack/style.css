@@ -63,7 +63,11 @@ h2,
 h3,
 h4,
 span {
-  margin: 0px;
+  margin: 0 0 1rem;
+}
+
+p {
+  margin: 0 0 1rem;
 }
 
 .cards {
@@ -203,7 +207,6 @@ a:hover {
   grid-column-gap: var(--space-2);
   grid-row-gap: var(--space-2);
   scroll-snap-type: x mandatory;
-  padding: 0 clamp(2vw, 1rem, 1.5rem);
 }
 
 .hobby .card-wrapper {
@@ -219,7 +222,8 @@ a:hover {
 .hobby .card-inner {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  background-color: var(--card-color);
 }
 
 .hobby .card {
@@ -228,7 +232,8 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--card-color);
+
+  background-color: rgba(255, 255, 255, 0.1);
   width: auto;
   min-height: auto;
   border-radius: 12px;
