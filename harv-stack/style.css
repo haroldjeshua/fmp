@@ -199,6 +199,14 @@ a:hover {
   flex-direction: row-reverse;
 }
 
+.hobby .section:nth-of-type(2) .card-wrapper {
+  direction: rtl;
+}
+
+.hobby .section:nth-of-type(2) .card {
+  direction: ltr;
+}
+
 .hobby .card-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -219,20 +227,12 @@ a:hover {
   display: none; /* hide scrollbar for Chrome, Safari, and Opera */
 }
 
-.hobby .card-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  background-color: var(--card-color);
-}
-
 .hobby .card {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   background-color: rgba(255, 255, 255, 0.1);
   width: auto;
   min-height: auto;
@@ -241,6 +241,19 @@ a:hover {
   cursor: pointer;
   transition: 0.3s ease;
   scroll-snap-align: center;
+}
+
+.hobby .card-inner {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: var(--card-color);
+  inset: 1px;
+  border-radius: inherit;
+  margin: 1px;
+  padding: clamp(10px, 16px, 32px);
+  z-index: 2;
 }
 
 .text-wrapper {

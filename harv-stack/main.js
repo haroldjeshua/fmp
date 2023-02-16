@@ -1,6 +1,6 @@
 import "./style.css";
 
-document.querySelector(".cards").onmousemove = (e) => {
+document.querySelector(".cards, .card-wrapper").onmousemove = (e) => {
   for (const card of document.querySelectorAll(".card")) {
     const rect = card.getBoundingClientRect();
     const x = e.clientX - rect.left;
