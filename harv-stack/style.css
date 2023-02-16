@@ -1,0 +1,160 @@
+:root {
+  --bg: hsl(0, 0%, 8%);
+  --card-color: hsl(0, 0%, 9%);
+  --text-color: hsl(0, 0%, 64%);
+  --icon-color: hsl(0, 0%, 32%);
+  font-family: "Inter", sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  :root {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 5rem clamp(1.2rem, 1rem, 2rem);
+  /* overflow: hidden; */
+}
+
+.header {
+  width: 100%;
+  max-width: 920px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+span {
+  margin: 0px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  width: calc(100% - 20px);
+  margin: auto;
+}
+
+.cards:hover > .card::after {
+  opacity: 1;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.1);
+  min-height: 256px;
+  width: 300px;
+  /* border: 1px solid rgba(255, 255, 255, 0.1); */
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card::before,
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 400ms;
+}
+
+.card::before {
+  background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.06),
+    transparent 40%
+  );
+  z-index: 3;
+}
+
+.card::after {
+  background: radial-gradient(
+    600px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.125),
+    transparent 40%
+  );
+  z-index: 1;
+}
+
+.card > .card-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: var(--card-color);
+  inset: 1px;
+  border-radius: inherit;
+  margin: 1px;
+  padding: clamp(10px, 16px, 32px);
+  z-index: 2;
+}
+
+.card-icon {
+  display: flex;
+  color: var(--icon-color);
+  font-size: 88px;
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  position: relative;
+  bottom: -4rem;
+  margin-top: auto;
+  align-self: center;
+}
+
+footer > h5 {
+  font-weight: 300;
+}
+
+@media (max-width: 1000px) {
+  body {
+    align-items: flex-start;
+    overflow: auto;
+  }
+
+  #cards {
+    max-width: 1000px;
+    padding: 10px 0px;
+  }
+
+  .card {
+    flex-shrink: 1;
+    width: calc(50% - 4px);
+  }
+}
+
+@media (max-width: 512px) {
+  .card {
+    width: 100%;
+  }
+}
