@@ -179,7 +179,7 @@ a:hover {
 }
 
 .hobby .header {
-  align-items: flex-start;
+  margin-bottom: 8rem;
 }
 
 .hobby .section {
@@ -202,9 +202,18 @@ a:hover {
   grid-auto-columns: minmax(200px, 1fr);
   grid-column-gap: var(--space-2);
   grid-row-gap: var(--space-2);
-  overflow-x: auto;
   scroll-snap-type: x mandatory;
   padding: 0 clamp(2vw, 1rem, 1.5rem);
+}
+
+.hobby .card-wrapper {
+  overflow-x: auto;
+  scrollbar-width: none; /* hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* hide scrollbar for IE and Edge */
+}
+
+.hobby .card-wrapper::-webkit-scrollbar {
+  display: none; /* hide scrollbar for Chrome, Safari, and Opera */
 }
 
 .hobby .card {
@@ -218,6 +227,10 @@ a:hover {
   cursor: pointer;
   transition: 0.3s ease;
   scroll-snap-align: center;
+}
+
+.card-wrapper > * {
+  order: -1;
 }
 
 /* mqueries */
