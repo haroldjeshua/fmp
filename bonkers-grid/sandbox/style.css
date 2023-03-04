@@ -6,6 +6,10 @@
   --light: #dcdcdc;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background: #dcdcdc;
   color: #121212;
@@ -19,6 +23,21 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
   /* ^ implicit grid: let the algorithm figure out cols/rows -> auto-fit*/
   font-size: 3rem;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--dark);
+  border-radius: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .grid-sandbox .card:first-child {
@@ -35,17 +54,45 @@ body {
   transform: rotate(45deg);
 }
 
-.card {
+.grid-sandbox .card:nth-child(3) {
+  background-color: var(--brand);
+  gap: 1rem;
+}
+
+.circle-stacks {
+  --position: -16px;
+  display: flex;
+}
+
+.circle {
+  position: relative;
+  width: 64px;
+  height: 64px;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 2px solid var(--dark);
-  border-radius: 1.25rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: 0.2s ease;
+  border-radius: 50%;
 }
 
-.card:hover {
-  transform: translateY(-5px);
+.circle-stacks .circle:first-child {
+  background-color: orangered;
+  z-index: 4;
+}
+
+.circle-stacks .circle:nth-child(2) {
+  background-color: blue;
+  left: var(--position);
+  z-index: 3;
+}
+
+.circle-stacks .circle:nth-child(3) {
+  background-color: lightcoral;
+  left: calc(var(--position) * 2);
+  z-index: 2;
+}
+.circle-stacks .circle:nth-child(4) {
+  background-color: whitesmoke;
+  left: calc(var(--position) * 3);
+  z-index: 1;
 }
