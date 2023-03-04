@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@100;400;600&display=swap");
+
+:root {
+  --brand: #2ad972;
+  --dark: #121212;
+  --light: #dcdcdc;
+}
+
+body {
+  background: #dcdcdc;
+  color: #121212;
+  font-family: "Chivo", sans-serif;
+}
+
+.grid-sandbox {
+  display: grid;
+  gap: 1.25rem;
+
+  grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+  /* ^ implicit grid: let the algorithm figure out cols/rows -> auto-fit*/
+  font-size: 3rem;
+}
+
+.grid-sandbox .card:first-child {
+  background-color: var(--brand);
+}
+
+.grid-sandbox .card:nth-child(-n + 3) {
+  min-height: 100px;
+}
+
+.grid-sandbox .card:first-child div {
+  display: inline-block;
+  width: fit-content;
+  transform: rotate(45deg);
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--dark);
+  border-radius: 1.25rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
