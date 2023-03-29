@@ -16,6 +16,9 @@ function App() {
         <Route path="/cards/*" element={<CardRoutes />} />
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
+      <footer className="fixed bottom-0 mt-auto self-center z-[2]">
+        <h5>✲ Made by Harv.</h5>
+      </footer>
     </div>
   );
 }
