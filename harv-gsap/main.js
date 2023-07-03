@@ -1,1 +1,51 @@
 import "./style.css";
+
+function startLoader() {
+  let counterElement = document.querySelector(".counter");
+  let currentValue = 0;
+
+  function updateCounter() {
+    if (currentValue === 100) {
+      return;
+    }
+
+    counterElement += Math.floor(Math.random() * 10) + 1;
+
+    if (currentValue > 100) {
+      currentValue = 100;
+    }
+
+    currentValue.textContent = currentValue;
+
+    let delay = Math.floor(Math.random() * 200) + 50;
+    setTimeout(updateCounter, delay);
+  }
+
+  updateCounter();
+}
+
+startLoader();
+
+gsap.to(".bar", 1.5, {
+  delay: 3.5,
+  height: 0,
+  stagger: {
+    amount: 0.5,
+  },
+  ease: "power4.inOut",
+});
+
+gsap.to(".h1", 1.5, {
+  delay: 4,
+  y: 700,
+  stagger: {
+    amount: 0.5,
+  },
+  ease: "power4.inOut",
+});
+
+gsap.from("hero", 2, {
+  delay: 4.5,
+  y: 400,
+  ease: power4.inOut,
+});
