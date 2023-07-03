@@ -7,7 +7,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #dcdcdc;
+  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -60,9 +60,11 @@ nav div a {
 .header .h1 {
   position: relative;
   font-family: "Syne", sans-serif;
-  font-size: 32vw;
+  font-size: 22vw;
+  font-weight: 800;
   color: #121212;
   line-height: 1.125;
+  text-transform: uppercase;
 }
 
 .hero {
