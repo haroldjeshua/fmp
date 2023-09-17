@@ -30,6 +30,7 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    margin-bottom: 5rem;
     padding: 0 2.5rem;
   }
   
@@ -44,14 +45,21 @@
   }
   
   h1 {
-    font-size: clamp(2rem, 2.5rem, 5rem);
+    font-size: clamp(2rem, 3rem, 5rem);
+    font-weight: 600;
   }
   
-  h5, p {
+  h2 {
+    font-size: clamp(1.75rem, 2rem, 4rem);
+    font-weight: 500;
+  }
+  
+  h5,
+  p {
     font-size: clamp(1.25rem, 2vw, 1.5rem);
     font-weight: 400;
     animation: fade linear;
-    animation-timeline: view();
+    animation-timeline: view(); /* scroll(inline) for horizontal scroll / overflow-x */
     animation-range: entry 50% cover 50%;
   }
   
