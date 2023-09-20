@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: #211D40;
+  color: #fff;
+}
+
+main {
+  margin: 0 auto;
+  padding: 2rem 2.25rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 5rem;
+}
+
+.form__body {
+  font-size: 1.75rem;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.search-user {
+  margin-right: .5rem;
+}
+
+.search-field {
+      position: relative;
+    padding-bottom: 3px;
+    white-space: nowrap;
+    border: 0;
+    border-bottom: 2px solid;
+    -o-border-image: linear-gradient(141.27deg,#ff904e -4.24%,#ff5982 21.25%,#ec68f4 44.33%,#79e2ff 83.46%) 1 2;
+    border-image: linear-gradient(141.27deg,#ff904e -4.24%,#ff5982 21.25%,#ec68f4 44.33%,#79e2ff 83.46%) 1 2;
+}
+
+.search-field__input {
+  min-width: 1em;
+  max-width: 100%;
+  background: transparent;
+  border: none;
+}
+
+.prefix {
+  display: inline-block;
+  width: 1.2ch;
+  font-weight: 600;
+}
+
+.gradient-text {
+  color: #fa3768;
+  font-weight: 400;
+  letter-spacing: -.04em;
+  background: linear-gradient(141.27deg,#ff904e -4.24%,#ff5982 21.25%,#ec68f4 44.33%,#79e2ff 83.46%);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-animation: gradient-data-v-66b40ddc 10s ease infinite;
+    animation: gradient-data-v-66b40ddc 10s ease infinite;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradient-text--inline {
+  display: inline;
+}
+
+.field {
+  padding-bottom: 3px;
+    border: 0;
+    border-bottom: 2px solid;
+    -o-border-image: linear-gradient(141.27deg,#ff904e -4.24%,#ff5982 21.25%,#ec68f4 44.33%,#79e2ff 83.46%) 1 2;
+    /* border-image: linear-gradient(141.27deg,#ff904e -4.24%,#ff5982 21.25%,#ec68f4 44.33%,#79e2ff 83.46%) 1 2; */
+    transition: all .3s;
+}
+
+.form__footer {
+  margin-top: 2.5rem;
+}
+
+.counter {
+  margin-bottom: 1.5rem;
+  color: #f0eefe;
+  font-size: .75rem;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.terms {
+  margin-bottom: 1.5rem;
+}
+
+a {
+  color: #fa3768;
+  text-decoration: underline;
+  font-size: 1.5rem;
+}
+
+.cta {
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1;
+  white-space: nowrap;
+  border-radius: 0.5em;
+  transition: all .2s;
+}
+
+.cta--primary {
+      color: #fff;
+    background: radial-gradient(50% 50% at 50%,at 50%,#f36 0,#fa3667 100%);
+    background: radial-gradient(50% 50% at 50% 50%,#f36 0,#fa3667 100%);
+    box-shadow: 0 4px 14px rgba(250,55,104,.48);
+}
+
+.signin-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
